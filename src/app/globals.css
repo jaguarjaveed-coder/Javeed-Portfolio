@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #f6f6f3;
+  --paper-alt: #ecebe4;
+  --ink: #16181c;
+  --ink-deep: #0e1013;
+  --ink-muted: #5c6169;
+  --rule: #dedcd6;
+  --signal: #0e6a5a;
+  --header-h: 4rem;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-alt: var(--paper-alt);
+  --color-ink: var(--ink);
+  --color-ink-deep: var(--ink-deep);
+  --color-ink-muted: var(--ink-muted);
+  --color-rule: var(--rule);
+  --color-signal: var(--signal);
+
+  --font-display: var(--font-display-raw);
+  --font-sans: var(--font-body-raw);
+  --font-mono: var(--font-mono-raw);
+
+  /* Real type scale, ~1.25 ratio. Hero sits well above everything else. */
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1.5;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.5;
+  --text-base: 1rem;
+  --text-base--line-height: 1.65;
+  --text-md: 1.25rem;
+  --text-md--line-height: 1.5;
+  --text-lg: 1.5625rem;
+  --text-lg--line-height: 1.3;
+  --text-xl: 1.953rem;
+  --text-xl--line-height: 1.2;
+  --text-2xl: 2.441rem;
+  --text-2xl--line-height: 1.15;
+  --text-3xl: 3.052rem;
+  --text-3xl--line-height: 1.1;
+  --text-4xl: 3.815rem;
+  --text-4xl--line-height: 1.03;
+  --text-5xl: 4.768rem;
+  --text-5xl--line-height: 1.0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+/* Scopes a section to the inverted palette. Every existing text-ink,
+   text-ink-muted, border-rule / divide-rule utility inside picks this up
+   automatically because @theme inline points those tokens at these same
+   custom properties. --signal is lightened (same hue) to clear 4.5:1
+   against --ink-deep — see the contrast check in the build notes. */
+.on-dark {
+  --ink: var(--paper);
+  --ink-muted: #9aa0a6;
+  --rule: rgb(246 246 243 / 18%);
+  --signal: #149982;
+}
+
+.font-mono {
+  font-variant-numeric: tabular-nums;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+@keyframes fade-rise {
+  from {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-rise {
+  animation: fade-rise 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-rise {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-reveal {
+  transition:
+    opacity 700ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Hero: single column on mobile (portrait sits after the standfirst, never
+   above the headline); two columns from md, text ~60% / portrait ~40%. */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "eyebrow"
+    "headline"
+    "standfirst"
+    "portrait"
+    "meta";
+  column-gap: 3rem;
+  row-gap: 2.5rem;
+}
+
+@media (min-width: 48rem) {
+  .hero-grid {
+    grid-template-columns: 3fr 2fr;
+    grid-template-areas:
+      "eyebrow    portrait"
+      "headline   portrait"
+      "standfirst portrait"
+      "meta       portrait";
+    align-items: start;
+  }
+}
+
+/* Case study: metadata stacks above the body on mobile (current order);
+   from md it becomes a narrow left rail beside the headline + body. */
+.case-study-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "client"
+    "headline"
+    "meta"
+    "body";
+  column-gap: 2.5rem;
+  row-gap: 0.75rem;
+}
+
+@media (min-width: 48rem) {
+  .case-study-grid {
+    grid-template-columns: 200px 1fr;
+    grid-template-areas:
+      "client headline"
+      "meta   headline"
+      "meta   body";
+    row-gap: 0.5rem;
+  }
+}
