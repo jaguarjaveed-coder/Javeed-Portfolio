@@ -236,7 +236,7 @@ export default function DatenschutzPage() {
                     Diese Datenschutzerklärung wird angepasst, sobald sich die
                     Datenverarbeitung auf dieser Website ändert.
                   </P>
-                  <P>Stand: [08.2026]</P>
+                  <P>Stand: August 2026</P>
                 </div>
               </div>
             </div>
