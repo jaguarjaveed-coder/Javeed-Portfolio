@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { buildTrack } from "@/content";
 import { findPublicAsset } from "@/lib/assets";
 import { highlightFigures } from "@/lib/figures";
@@ -63,6 +64,15 @@ export function BuildTrack() {
           Repository ↗
         </a>
       </div>
+
+      <p className="mt-10 font-mono text-sm">
+        <Link
+          href="/background"
+          className="text-ink underline decoration-rule underline-offset-4 hover:decoration-ink"
+        >
+          Full experience, capabilities and credentials →
+        </Link>
+      </p>
     </Section>
   );
 }

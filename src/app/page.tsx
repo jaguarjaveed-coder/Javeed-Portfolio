@@ -1,11 +1,9 @@
 import { BuildTrack } from "@/components/BuildTrack";
-import { Capabilities } from "@/components/Capabilities";
 import { CaseStudies } from "@/components/CaseStudies";
 import { Contact } from "@/components/Contact";
-import { Credentials } from "@/components/Credentials";
-import { Experience } from "@/components/Experience";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
+import { Logos } from "@/components/Logos";
 import { Scale } from "@/components/Scale";
 
 export default function Home() {
@@ -14,11 +12,9 @@ export default function Home() {
       <main>
         <Hero />
         <Scale />
+        <Logos />
         <CaseStudies />
         <BuildTrack />
-        <Experience />
-        <Capabilities />
-        <Credentials />
         <Contact />
       </main>
       <Footer />

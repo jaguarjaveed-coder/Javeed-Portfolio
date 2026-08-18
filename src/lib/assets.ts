@@ -12,3 +12,10 @@ export function findPublicAsset(...filenames: string[]): string | null {
   }
   return null;
 }
+
+// Server-only: true if the given public/ filename exists on disk. For
+// rendering a set of independent, optional assets (e.g. a logo strip) where
+// each missing file should just be skipped, not substituted for another.
+export function publicAssetExists(filename: string): boolean {
+  return existsSync(join(process.cwd(), "public", filename));
+}

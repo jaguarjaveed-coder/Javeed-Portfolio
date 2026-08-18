@@ -10,12 +10,6 @@ export function Footer() {
         </p>
         <div className="flex gap-6">
           <Link
-            href="/impressum"
-            className="underline decoration-rule underline-offset-4 hover:decoration-ink hover:text-ink"
-          >
-            Impressum
-          </Link>
-          <Link
             href="/datenschutz"
             className="underline decoration-rule underline-offset-4 hover:decoration-ink hover:text-ink"
           >
