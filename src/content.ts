@@ -246,7 +246,7 @@ export const buildTrack = {
     "A working application that scores B2B ad copy on ICP fit, value proposition clarity, CTA strength and EU localisation, then rewrites it. Built to answer a question I kept being asked in interviews — whether I could architect automation on top of paid media, or only use tools somebody else built.",
   liveUrl: "https://campaign-reviewer.onrender.com",
   repoUrl: "https://github.com/jaguarjaveed-coder/campaign-reviewer",
-  stack: "Next.js 15 · TypeScript · Tailwind · Anthropic API · Render",
+  stack: "Next.js 16 · TypeScript · Tailwind · Anthropic API · Render",
   what: [
     "Scores copy across four dimensions and returns per-dimension issues plus a rewritten version",
     "Persona-aware scoring — a Datenschutzbeauftragter blocking a DACH deal is scored against a different rubric than a champion",
