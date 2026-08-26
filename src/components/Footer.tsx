@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { meta } from "@/content";
+import { reopenConsentBanner } from "@/lib/consent";
 
 export function Footer() {
   return (
@@ -15,6 +18,13 @@ export function Footer() {
           >
             Datenschutz
           </Link>
+          <button
+            type="button"
+            onClick={reopenConsentBanner}
+            className="cursor-pointer border-0 bg-transparent p-0 underline decoration-rule underline-offset-4 hover:decoration-ink hover:text-ink"
+          >
+            Cookie-Einstellungen
+          </button>
         </div>
       </div>
     </footer>

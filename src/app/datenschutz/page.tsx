@@ -31,11 +31,11 @@ function List({ items }: { items: string[] }) {
 
 export default function DatenschutzPage() {
   return (
-    <>
+    <div lang="de" className="hyphens-auto break-words">
       <main>
         <Section ground="paper">
           <div className="max-w-[65ch]">
-            <h1 className="font-display text-3xl font-semibold tracking-tight text-ink md:text-4xl">
+            <h1 className="font-display text-2xl font-semibold tracking-tight text-ink sm:text-3xl md:text-4xl">
               Datenschutzerklärung
             </h1>
 
@@ -65,15 +65,25 @@ export default function DatenschutzPage() {
 
               <div>
                 <h2 className="font-mono text-xs uppercase tracking-[0.08em] text-ink-muted">
-                  2. Grundsätzliches
+                  2. Einwilligung und Cookies
                 </h2>
                 <div className="mt-4 flex flex-col gap-4">
                   <P>
-                    Diese Website verwendet keine Cookies, keine Analyse- oder
-                    Tracking-Werkzeuge und keine Werbe- oder Social-Media-Plugins. Es
-                    findet keine Profilbildung und keine automatisierte
-                    Entscheidungsfindung statt. Eine Einwilligung in die Speicherung
-                    von Informationen auf Ihrem Endgerät ist daher nicht erforderlich.
+                    Diese Website verwendet Cookies und vergleichbare Technologien zur
+                    Reichweitenmessung. Diese werden ausschließlich nach Ihrer
+                    ausdrücklichen Einwilligung gesetzt. Rechtsgrundlage ist § 25 Abs. 1
+                    TDDDG in Verbindung mit Art. 6 Abs. 1 lit. a DSGVO.
+                  </P>
+                  <P>
+                    Technisch notwendige Speicherungen — insbesondere die Speicherung
+                    Ihrer Einwilligungsentscheidung selbst — erfolgen auf Grundlage von
+                    § 25 Abs. 2 Nr. 2 TDDDG und erfordern keine Einwilligung.
+                  </P>
+                  <P>
+                    Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft
+                    widerrufen. Nutzen Sie dazu den Link „Cookie-Einstellungen&quot; am
+                    Ende jeder Seite. Die Rechtmäßigkeit der bis zum Widerruf erfolgten
+                    Verarbeitung bleibt unberührt.
                   </P>
                   <P>
                     Verwendete Schriftarten werden lokal vom Server dieser Website
@@ -153,7 +163,121 @@ export default function DatenschutzPage() {
 
               <div>
                 <h2 className="font-mono text-xs uppercase tracking-[0.08em] text-ink-muted">
-                  4. Kontaktaufnahme per E-Mail
+                  4. Google Tag Manager
+                </h2>
+                <div className="mt-4 flex flex-col gap-4">
+                  <P>
+                    Diese Website nutzt den Google Tag Manager, einen Dienst der
+                    Google Ireland Limited, Gordon House, Barrow Street, Dublin 4,
+                    Irland.
+                  </P>
+                  <P>
+                    Der Google Tag Manager selbst erstellt keine Nutzerprofile und
+                    speichert keine Cookies. Er dient ausschließlich der Verwaltung
+                    und Auslieferung weiterer Dienste. Beim Laden des Tag Managers
+                    wird Ihre IP-Adresse an Google übermittelt.
+                  </P>
+                  <P>
+                    Der Tag Manager ist mit dem Google Consent Mode konfiguriert. Alle
+                    einwilligungspflichtigen Dienste bleiben blockiert, bis Sie
+                    eingewilligt haben.
+                  </P>
+                  <P>
+                    Rechtsgrundlage für den Einsatz des Tag Managers ist Art. 6 Abs. 1
+                    lit. f DSGVO. Das berechtigte Interesse liegt in der technisch
+                    strukturierten und datenschutzkonformen Verwaltung der auf dieser
+                    Website eingesetzten Dienste.
+                  </P>
+                </div>
+              </div>
+
+              <div>
+                <h2 className="font-mono text-xs uppercase tracking-[0.08em] text-ink-muted">
+                  5. Google Analytics 4
+                </h2>
+                <div className="mt-4 flex flex-col gap-4">
+                  <P>
+                    Nach Ihrer Einwilligung nutzt diese Website Google Analytics 4,
+                    einen Dienst der Google Ireland Limited, Gordon House, Barrow
+                    Street, Dublin 4, Irland.
+                  </P>
+                  <P>
+                    Google Analytics verwendet Cookies, die eine Analyse Ihrer Nutzung
+                    dieser Website ermöglichen. Dabei werden unter anderem folgende
+                    Daten verarbeitet:
+                  </P>
+                  <List
+                    items={[
+                      "gekürzte IP-Adresse",
+                      "aufgerufene Seiten und Verweildauer",
+                      "Referrer-URL",
+                      "Browsertyp, Betriebssystem und ungefähre geografische Herkunft",
+                      "pseudonyme Nutzerkennung",
+                    ]}
+                  />
+                  <P>
+                    Die IP-Adresse wird von Google innerhalb der Europäischen Union
+                    gekürzt, bevor sie gespeichert wird. Eine Zusammenführung mit
+                    anderen Daten von Google findet nicht statt. Google Signals ist
+                    deaktiviert.
+                  </P>
+                  <P>
+                    Rechtsgrundlage ist Art. 6 Abs. 1 lit. a DSGVO in Verbindung mit
+                    § 25 Abs. 1 TDDDG. Die Verarbeitung erfolgt ausschließlich auf
+                    Grundlage Ihrer Einwilligung.
+                  </P>
+                  <P>
+                    Die Speicherdauer der Ereignisdaten beträgt 14 Monate.
+                    Anschließend werden die Daten automatisch gelöscht.
+                  </P>
+                  <P>
+                    Mit Google besteht ein Vertrag zur Auftragsverarbeitung nach
+                    Art. 28 DSGVO auf Grundlage der Google-Analytics-Nutzungsbedingungen
+                    und der darin einbezogenen Bestimmungen zur Datenverarbeitung. Eine
+                    Übermittlung in die Vereinigten Staaten von Amerika kann nicht
+                    ausgeschlossen werden. Die Übermittlung erfolgt auf Grundlage der
+                    Standardvertragsklauseln der Europäischen Kommission sowie der
+                    Zertifizierung von Google LLC nach dem EU-US Data Privacy
+                    Framework.
+                  </P>
+                  <P>
+                    Weitere Informationen:{" "}
+                    <a
+                      href="https://policies.google.com/privacy"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={LINK_CLASS}
+                    >
+                      https://policies.google.com/privacy
+                    </a>
+                  </P>
+                </div>
+              </div>
+
+              <div>
+                <h2 className="font-mono text-xs uppercase tracking-[0.08em] text-ink-muted">
+                  6. Google Consent Mode
+                </h2>
+                <div className="mt-4 flex flex-col gap-4">
+                  <P>
+                    Diese Website nutzt den Google Consent Mode v2. Ihre
+                    Einwilligungsentscheidung wird an Google übermittelt und steuert,
+                    ob die genannten Dienste Cookies setzen und personenbezogene Daten
+                    verarbeiten dürfen.
+                  </P>
+                  <P>
+                    Ohne Ihre Einwilligung werden keine Cookies gesetzt und keine
+                    personenbezogenen Kennungen verarbeitet. Google kann in diesem Fall
+                    aggregierte, nicht personenbezogene Signale erhalten und daraus
+                    statistische Modellierungen erstellen. Ein Rückschluss auf Ihre
+                    Person ist dabei nicht möglich.
+                  </P>
+                </div>
+              </div>
+
+              <div>
+                <h2 className="font-mono text-xs uppercase tracking-[0.08em] text-ink-muted">
+                  7. Kontaktaufnahme per E-Mail
                 </h2>
                 <div className="mt-4">
                   <P>
@@ -170,7 +294,7 @@ export default function DatenschutzPage() {
 
               <div>
                 <h2 className="font-mono text-xs uppercase tracking-[0.08em] text-ink-muted">
-                  5. Externe Links
+                  8. Externe Links
                 </h2>
                 <div className="mt-4">
                   <P>
@@ -186,7 +310,7 @@ export default function DatenschutzPage() {
 
               <div>
                 <h2 className="font-mono text-xs uppercase tracking-[0.08em] text-ink-muted">
-                  6. Ihre Rechte
+                  9. Ihre Rechte
                 </h2>
                 <div className="mt-4 flex flex-col gap-4">
                   <P>Sie haben nach der DSGVO folgende Rechte:</P>
@@ -209,7 +333,7 @@ export default function DatenschutzPage() {
 
               <div>
                 <h2 className="font-mono text-xs uppercase tracking-[0.08em] text-ink-muted">
-                  7. Beschwerderecht
+                  10. Beschwerderecht
                 </h2>
                 <div className="mt-4 flex flex-col gap-4">
                   <P>
@@ -229,7 +353,7 @@ export default function DatenschutzPage() {
 
               <div>
                 <h2 className="font-mono text-xs uppercase tracking-[0.08em] text-ink-muted">
-                  8. Änderungen dieser Datenschutzerklärung
+                  11. Änderungen dieser Datenschutzerklärung
                 </h2>
                 <div className="mt-4 flex flex-col gap-4">
                   <P>
@@ -253,6 +377,6 @@ export default function DatenschutzPage() {
           </Link>
         </div>
       </footer>
-    </>
+    </div>
   );
 }

@@ -112,6 +112,28 @@ body {
     transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* Consent banner: opacity only, no rise — it must not read as another
+   scroll-reveal section. */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 200ms ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in {
+    animation: none;
+    opacity: 1;
+  }
+}
+
 /* Hero: single column on mobile (portrait sits after the standfirst, never
    above the headline); two columns from md, text ~60% / portrait ~40%. */
 .hero-grid {
