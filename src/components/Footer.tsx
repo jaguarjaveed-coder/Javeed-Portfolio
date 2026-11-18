@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { meta } from "@/content";
+import { contact, meta } from "@/content";
 import { reopenConsentBanner } from "@/lib/consent";
 
 export function Footer() {
@@ -9,7 +9,7 @@ export function Footer() {
     <footer className="border-t border-rule">
       <div className="mx-auto flex max-w-[68rem] flex-col gap-4 px-6 py-10 font-mono text-xs text-ink-muted sm:flex-row sm:items-center sm:justify-between sm:px-8">
         <p>
-          {meta.name} · {meta.location}
+          {meta.name} · {contact.city}
         </p>
         <div className="flex gap-6">
           <Link

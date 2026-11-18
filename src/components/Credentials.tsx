@@ -14,7 +14,6 @@ export function Credentials() {
             {credentials.degree.qualification}
           </p>
           <p className="mt-1 text-sm text-ink-muted">{credentials.degree.institution}</p>
-          <p className="mt-1 font-mono text-xs text-ink-muted">{credentials.degree.note}</p>
         </div>
 
         <div>

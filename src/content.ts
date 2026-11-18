@@ -5,22 +5,21 @@
 
 export const meta = {
   name: "Javeed Ahamed",
-  role: "Senior Performance Marketing Manager",
-  location: "Berlin, Germany",
-  title: "Javeed Ahamed — Performance Marketing, Berlin",
+  role: "Performance Marketing Consultant",
+  title: "Javeed Ahamed — Performance Marketing Consultant, Chennai",
   description:
-    "Senior performance marketer. Eight years across paid search, social and programmatic. EUR 450,000 monthly media across five markets. Berlin-based.",
+    "Independent performance marketing consultant. Eight years across paid search, social and programmatic, including EUR 450,000 in monthly media across five markets. Based in Chennai, working with brands in India, the EU and the UK.",
 } as const;
 
 export const hero = {
-  eyebrow: "Performance marketing · Berlin",
+  eyebrow: "Performance marketing consultant · Chennai",
   headline: "Eight years running paid media that has to pay for itself.",
   standfirst:
-    "Search, social and programmatic across Germany, France, Great Britain, the United States and Australia. Most recently EUR 450,000 in monthly media across a 56-account portfolio at Deloitte Digital. Now building the automation layer that sits on top of it.",
+    "Search, social and programmatic across Germany, France, Great Britain, the United States and Australia. Most recently EUR 450,000 in monthly media across a 56-account portfolio at Deloitte Digital. Now independent, working with brands in India and Europe — and building the automation layer that sits on top of paid media.",
   // Availability + authorisation. One statement, used everywhere.
-  availability: "Available 2–4 weeks after offer",
+  availability: "Taking on new clients",
   authorisation:
-    "EU Blue Card eligible — Anabin-recognised degree, currently resident in Berlin on an Opportunity Card",
+    "Based in Chennai (IST) · working with teams across India, the EU and the UK",
 } as const;
 
 // Portfolio-level results. Stated once, at the top. Never attached to a
@@ -243,7 +242,7 @@ export const capabilities = {
 export const buildTrack = {
   headline: "Campaign Reviewer",
   standfirst:
-    "A working application that scores B2B ad copy on ICP fit, value proposition clarity, CTA strength and EU localisation, then rewrites it. Built to answer a question I kept being asked in interviews — whether I could architect automation on top of paid media, or only use tools somebody else built.",
+    "A working application that scores B2B ad copy on ICP fit, value proposition clarity, CTA strength and EU localisation, then rewrites it. Built to prove I can architect automation on top of paid media, not just use tools somebody else built.",
   liveUrl: "https://campaign-reviewer.onrender.com",
   repoUrl: "https://github.com/jaguarjaveed-coder/campaign-reviewer",
   stack: "Next.js 16 · TypeScript · Tailwind · Anthropic API · Render",
@@ -261,7 +260,6 @@ export const credentials = {
   degree: {
     qualification: "B.E. Computer Science",
     institution: "Anna University, Chennai",
-    note: "Anabin-recognised",
   },
   certifications: [
     "The Trade Desk Edge Academy — Trading Essentials: Kokai (2026)",
@@ -274,10 +272,7 @@ export const credentials = {
   languages: [
     { language: "Tamil", level: "Native" },
     { language: "English", level: "C1 — professional working proficiency" },
-    // CONFIRM before deploy: has the August 2026 B1 result come back?
-    // If yes → "B1 certified. B2 in progress, Module 2 completes November 2026"
-    // If not yet → "B1 exam completed August 2026. B2 in progress, Module 2 completes November 2026"
-    { language: "German", level: "B1 — B2 in progress, Module 2 completes November 2026" },
+    { language: "German", level: "B1 (certified)" },
   ],
 } as const;
 
@@ -285,6 +280,6 @@ export const contact = {
   email: "bjaveeahamed@gmail.com", // swap to hello@<domain> once the forwarder is live
   linkedin: "https://linkedin.com/in/javeed-ahamed-26745941",
   github: "https://github.com/jaguarjaveed-coder",
-  city: "Berlin, Germany",
-  note: "Open to senior in-house performance marketing roles in Germany.",
+  city: "Chennai, India",
+  note: "Open to consulting engagements with brands in India, the EU and the UK.",
 } as const;

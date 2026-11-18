@@ -51,9 +51,9 @@ export default function DatenschutzPage() {
                   <P>
                     Javeed Ahamed
                     <br />
-                    Berlin
+                    Chennai
                     <br />
-                    Deutschland
+                    Indien
                     <br />
                     E-Mail:{" "}
                     <a href={`mailto:${contact.email}`} className={LINK_CLASS}>
